@@ -6,7 +6,7 @@
 # 💡 How it works
 1. **Discovery**: Scans the `/proc` directory for PID-named folders using `dirent.h`.
 2. **Filtering**: Uses `isdigit()` to isolate system processes.
-3. **Extraction**: Parses `/proc/[PID]/comm` to retrieve the process name.
+3. **Extraction**: Parses `/proc/[PID]/status` to retrieve the process name and RAM usage.
 
 # 🛠️ Installation & Run Guide
 ```bash
