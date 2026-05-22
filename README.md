@@ -1,4 +1,4 @@
-# 🖥️ Linux Task Manager (CLI)
+# 🖥️ LTM - Linux Task Manager (CLI)
 
 A lightweight, interactive, high-performance Linux Command-Line Task Manager written in standard C++. It interacts directly with the Linux Kernel via the `/proc` pseudo-filesystem to monitor active processes and manage them using POSIX system signals.
 
@@ -30,11 +30,12 @@ When you run the application, you will interact with a clean terminal:
 
 # 🛠️ Installation & Run Guide
 ```bash
-# Clone the repository
-git clone https://github.com/sudoRebel/LinuxTaskManager
+# 1. Clone the repository
+git clone https://github.com/sudoRebel/linux-task-manager
+cd linux-task-manager
 
-# Compile with G++
-g++ -o LinuxTaskManager main.cpp
+# 2. Compile using Clang++ with C++17
+clang++ -std=c++17 -o linux-task-manager main.cpp
 
-# Run the app
-./LinuxTaskManager
+# 3. Run the application
+./linux-task-manager
