@@ -20,16 +20,9 @@ A lightweight, interactive, high-performance Linux Command-Line Task Manager wri
 4. **Interactivity**: Captures user input to safely dispatch POSIX signals or trigger dynamic terminal redraws using `system("clear")`.
 
 # 🖥️ UI Preview
-When you run the application, you will interact with a clean terminal layout:
+When you run the application, you will interact with a clean terminal:
 
-+---------------------Terminal---------------------+
-| ---------- Linux Task Manager ----------         |
-| PID: 1       Name: systemd        RAM: 12.4 MB   |
-| PID: 532     Name: Xorg           RAM: 145.2 MB  |
-| PID: 2134    Name: g++            RAM: 45.8 MB   |
-|                                                  |
-| Enter a choice (1 Refresh, 2 Kill process, 3 Exit):|
-+--------------------------------------------------+
+<img width="424" height="307" alt="Screenshot" src="https://github.com/user-attachments/assets/956c886e-a750-4484-b35a-65066953ffea" />
 
 # 🐧 System Requirements
 * **OS**: Linux-based operating systems (Tested on Arch Linux).
