@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <dirent.h>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <sys/types.h>
 #include <unistd.h>
@@ -47,29 +48,26 @@ void procList() {
         kb = 0;
       }
 
+      std::cout << std::left << "PID: " << std::setw(10) << pid
+                << " Name: " << std::setw(35) << procName << " RAM: ";
+
       if (kb >= 1099511627776.0) {
         pb = kb / 1099511627776.0;
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << pb << " PB" << std::endl;
+        std::cout << pb << " PB" << std::endl;
       } else if (kb >= 1073741824.0) {
         tb = kb / 1073741824.0;
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << tb << " TB" << std::endl;
+        std::cout << tb << " TB" << std::endl;
       } else if (kb >= 1048576.0) {
         gb = kb / 1048576.0;
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << gb << " GB" << std::endl;
+        std::cout << gb << " GB" << std::endl;
       } else if (kb >= 1024.0) {
         mb = kb / 1024.0;
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << mb << " MB" << std::endl;
+        std::cout << mb << " MB" << std::endl;
       } else if (kb >= 1.0) {
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << kb << " kB" << std::endl;
+        std::cout << kb << " kB" << std::endl;
       } else {
         byt = kb * 1024.0;
-        std::cout << "PID: " << pid << " \t Name: " << procName
-                  << " \t RAM: " << byt << " Byte" << std::endl;
+        std::cout << byt << " Byte" << std::endl;
       }
 
       statusFile.close();
@@ -97,10 +95,16 @@ int main() {
         std::cout << "Process killed" << std::endl;
       } else {
         perror("Error Killing the process!");
+        usleep(10000000);
       }
     } else if (choice == 3) {
       break;
+    } else {
+      std::cout << "Unknown state" << std::endl;
+      usleep(5000000);
     }
+    continue;
   }
+
   return 0;
 }
