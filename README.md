@@ -10,7 +10,7 @@ A lightweight, interactive, high-performance Linux Command-Line Task Manager wri
 * **PID Mapping**: Identifies active processes.
 * **Interactive CLI Interface**: Real-time process monitoring with custom action loops (Refresh/Exit).
 * **Process Management**: Send kernel signals (`SIGKILL`) to terminate any task instantly via PID.
-* **Smart Memory Auto-Scaling**: Displays memory consumption dynamically in Bytes, kB, MB, GB, TB, or PB based on real usage.
+* **Smart Memory Auto-Scaling**: Displays memory consumption dynamically in Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, or Petabytes based on real usage.
 * **Crash Resilience**: Built-in exception handling to survive dynamic kernel thread shifts.
 
 # 💡 How it works
@@ -26,16 +26,16 @@ When you run the application, you will interact with a clean terminal:
 
 # 🐧 System Requirements
 * **OS**: Linux-based operating systems (Tested on Arch Linux).
-* **Compiler**: GCC/G++ or Clang with C++11 support or higher.
+* **Compiler**: Clang or GCC/G++ with C++17 support or higher.
 
 # 🛠️ Installation & Run Guide
 ```bash
 # 1. Clone the repository
-git clone https://github.com/sudoRebel/linux-task-manager
+git clone [https://github.com/sudoRebel/linux-task-manager](https://github.com/sudoRebel/linux-task-manager)
 cd linux-task-manager
 
 # 2. Compile using Clang++ with C++17
-clang++ -std=c++17 -o linux-task-manager main.cpp
+clang++ -std=c++17 -I include -o linux-task-manager src/*.cpp
 
 # 3. Run the application
 ./linux-task-manager
