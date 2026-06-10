@@ -9,6 +9,8 @@
 linux-task-manager
 TaskManager
 LTM
+chansaw
+Chansaw
 
 # Precompiled Headers
 *.gch
