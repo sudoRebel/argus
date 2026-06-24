@@ -1,4 +1,4 @@
-# argus (CLI)
+# Argus (CLI)
 
 A lightweight, interactive, high-performance Linux Command-Line Task Manager written in standard C++.
 
