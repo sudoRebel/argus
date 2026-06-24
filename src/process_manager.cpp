@@ -1,4 +1,4 @@
-#include "process_manager.h"
+#include "process_manager.hpp"
 #include <algorithm> // sort() function
 #include <dirent.h>  // for readding dirs
 #include <fstream>

@@ -1,11 +1,10 @@
-# 🖥️ Chansaw (CLI)
+# argus (CLI)
 
-Chansaw — A sharp Linux tool to terminate intractable processes.
-Chansaw is a lightweight, interactive, high-performance Linux Command-Line Task Manager written in standard C++.
+A lightweight, interactive, high-performance Linux Command-Line Task Manager written in standard C++.
 
 ---
 
-# ✨ Features
+# Features
 
 * **Zero-Dependency**: Standard C++ library only.
 * **Kernel Direct-Access**: Reads directly from the `/proc` filesystem.
@@ -16,7 +15,7 @@ Chansaw is a lightweight, interactive, high-performance Linux Command-Line Task 
 
 ---
 
-# 💡 How it works
+# How it works
 
 1. **Discovery**: Scans the `/proc` directory for PID-named folders using `dirent.h`.
 2. **Filtering**: Uses `isdigit()` to isolate system processes.
@@ -26,21 +25,21 @@ Chansaw is a lightweight, interactive, high-performance Linux Command-Line Task 
 
 ---
 
-# 🐧 System Requirements
+# System Requirements
 
 * **OS**: Linux-based operating systems.
-* **Compiler**: Clang or GCC/G++ with C++17 support or higher.
+* **Compiler**: Recommended Clang with C++17 support or higher.
 
 ---
 
-# 🛠️ Installation & Run Guide
+# Installation & Run Guide
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/sudoRebel/chansaw.git && cd chansaw
+git clone https://github.com/sudoRebel/argus.git && cd argus
 
 # 2. Compile using Clang++ with C++17
-clang++ -std=c++17 -I include/ src/*.cpp -o chansaw
+clang++ -std=c++17 -I include/ src/*.cpp -o argus
 
 # 3. Run the application with root privileges
-sudo ./chansaw
+sudo ./argus
